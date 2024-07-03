@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Image Search</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: white;
+        }
+        .search-container {
+            text-align: center;
+        }
+        .logo {
+            width: 272px;
+            margin-bottom: 20px;
+        }
+        input[type="text"] {
+            width: 500px;
+            padding: 12px;
+            font-size: 16px;
+            border: 1px solid #dfe1e5;
+            border-radius: 24px;
+            box-shadow: none;
+            outline: none;
+            margin-top: 20px;
+            box-sizing: border-box;
+        }
+        .input-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        button {
+            padding: 10px 20px;
+            margin-top: 10px;
+            cursor: pointer;
+            background-color: #4285F4;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            margin-left: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="search-container">
+        <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="Google" class="logo">
+        <div class="input-container">
+            <input type="text" id="query" placeholder="Enter search query">
+            <button onclick="searchImages()">Search</button>
+        </div>
+    </div>
+
+    <script>
+        function searchImages() {
+            const query = document.getElementById('query').value;
+            if (query) {
+                const url = `https://www.google.com/search?tbm=isch&q=${encodeURIComponent(query)}`;
+                window.location.href = url;
+            }
+        }
+    </script>
+</body>
+</html>
