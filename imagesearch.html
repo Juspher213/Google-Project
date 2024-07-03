@@ -96,37 +96,8 @@
                       <a class="nav-link" href="https://mail.google.com/mail/&ogbl">Gmail</a>
                     </li>
                     <li class="nav-item">
-                        <a id="searchLink" class="nav-link" href="index.html" onclick="redirectToIndex(event)">Images</a>
-                        <script>
-                            // Function to check and update link text based on current page
-                            function updateLinkText() {
-                                var currentPage = window.location.pathname;  // Get current page path
-                                
-                                // Check if current page is google_img.html
-                                if (currentPage.includes("google_img.html")) {
-                                    document.getElementById('searchLink').textContent = "Search";
-                                    document.getElementById('searchLink').href = "index.html";
-                                } else {
-                                    document.getElementById('searchLink').textContent = "Images";
-                                    document.getElementById('searchLink').href = "google_img.html";
-                                }
-                            }
+                        <a id="searchLink" class="nav-link" href="index.html" onclick="redirectToIndex(event)">Search</a>
                         
-                            // Call the function initially to set the correct link text on page load
-                            updateLinkText();
-                        
-                            // Function to handle link click and redirect
-                            function redirectToIndex(event) {
-                                event.preventDefault();  // Prevent the default behavior of the link
-                                
-                                // Perform your logic here before redirecting, if needed
-                                
-                                // Redirect to the updated href of the link
-                                window.location.href = document.getElementById('searchLink').href;
-                            }
-                        </script>
-                        
-
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" href="advanced_search.html">Advanced Search</a>
@@ -237,6 +208,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
 </body>
 
 </html>
